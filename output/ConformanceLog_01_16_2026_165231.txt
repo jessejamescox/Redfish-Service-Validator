@@ -1,0 +1,247 @@
+INFO - Redfish Service Validator, version 2.5.1
+INFO - 
+INFO - Writing config file to log directory
+INFO - Target URI: http://127.0.0.1:8443
+INFO - authtype: Basic
+collectionlimit: ['LogEntry', '20']
+debugging: False
+forceauth: True
+ip: http://127.0.0.1:8443
+logdir: /output
+oemcheck: True
+password: ******
+requestattempts: 10
+requesttimeout: 10
+schema_directory: ./SchemaFiles/metadata
+uricheck: False
+username: admin
+verbose: 0
+INFO - Start time: 01/16/26 - 16:52:31
+INFO - 
+INFO - Setting up service...
+INFO - Constructing metadata...
+INFO - Redfish Version of Service: 1.23.0
+INFO - Description of service: System Under Test - WAGO CDU Redfish Service version 1.23.0, 00000000-0000-0000-0000-000000000000
+INFO - 
+*** Validating /redfish/v1/
+WARNING - Warning: Schema not found for NVMeDomainCollection.NVMeDomainCollection ...  at /redfish/v1/
+WARNING - Warning: Schema not found for StorageSystemCollection.StorageSystemCollection ...  at /redfish/v1/
+WARNING - Warning: Schema not found for StorageServiceCollection.StorageServiceCollection ...  at /redfish/v1/
+INFO - 	 Type (ServiceRoot.v1_17_0.ServiceRoot), GET SUCCESS (time: 0:00:00.001862)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment
+INFO - 	 Type (ThermalEquipment.v1_1_2.ThermalEquipment), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs
+INFO - 	 Type (CoolingUnitCollection.CoolingUnitCollection), GET SUCCESS (time: 0:00:00.000022)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001
+INFO - 	 Type (CoolingUnit.v1_2_0.CoolingUnit), GET SUCCESS (time: 0:00:00.000018)
+ERROR - Entity Version Error: Linked resource LeakDetection reports version LeakDetection.v1_0_2.LeakDetection not in Schema ...  at /redfish/v1/ThermalEquipment/CDUs/CDU-001
+ERROR - Property Validation Error: LeakDetection ...  at /redfish/v1/ThermalEquipment/CDUs/CDU-001
+INFO - 	  FAIL...
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/PrimaryCoolantConnectors
+INFO - 	 Type (CoolantConnectorCollection.CoolantConnectorCollection), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/PrimaryCoolantConnectors/1
+INFO - 	 Type (CoolantConnector.v1_1_0.CoolantConnector), GET SUCCESS (time: 0:00:00.000102)
+ERROR - ValueError: CoolantConnectorType Value Primary Enum not found in ['Pair', 'Supply', 'Return', 'Inline', 'Closed'] ...  at /redfish/v1/ThermalEquipment/CDUs/CDU-001/PrimaryCoolantConnectors/1
+ERROR - Property Validation Error: CoolantConnectorType ...  at /redfish/v1/ThermalEquipment/CDUs/CDU-001/PrimaryCoolantConnectors/1
+INFO - 	  FAIL...
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/SecondaryCoolantConnectors
+INFO - 	 Type (CoolantConnectorCollection.CoolantConnectorCollection), GET SUCCESS (time: 0:00:00.000030)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/SecondaryCoolantConnectors/1
+INFO - 	 Type (CoolantConnector.v1_1_0.CoolantConnector), GET SUCCESS (time: 0:00:00.000028)
+ERROR - ValueError: CoolantConnectorType Value Secondary Enum not found in ['Pair', 'Supply', 'Return', 'Inline', 'Closed'] ...  at /redfish/v1/ThermalEquipment/CDUs/CDU-001/SecondaryCoolantConnectors/1
+ERROR - Property Validation Error: CoolantConnectorType ...  at /redfish/v1/ThermalEquipment/CDUs/CDU-001/SecondaryCoolantConnectors/1
+INFO - 	  FAIL...
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/LeakDetection
+ERROR - Missing Namespace Error: Namespace of LeakDetection.v1_0_2 appears missing from SchemaXML LeakDetection_v1.xml, attempting highest type: #LeakDetection.v1_0_2.LeakDetection ...  at /redfish/v1/ThermalEquipment/CDUs/CDU-001/LeakDetection
+ERROR - New namespace: LeakDetection.v1_1_0 ...  at /redfish/v1/ThermalEquipment/CDUs/CDU-001/LeakDetection
+INFO - 	 Type (LeakDetection.v1_0_1.LeakDetection), GET SUCCESS (time: 0:00:00.000019)
+WARNING - Deprecated Property Warning: The given property LeakDetectors is deprecated: This property has been deprecated in favor of the `LeakDetectors` property in the related `Chassis` resource. ...  at /redfish/v1/ThermalEquipment/CDUs/CDU-001/LeakDetection
+INFO - 	  FAIL...
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/LeakDetection/LeakDetectors
+INFO - 	 Type (LeakDetectorCollection.LeakDetectorCollection), GET SUCCESS (time: 0:00:00.000078)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/LeakDetection/LeakDetectors/1
+INFO - 	 Type (LeakDetector.v1_1_0.LeakDetector), GET SUCCESS (time: 0:00:00.000041)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/Pumps
+INFO - 	 Type (PumpCollection.PumpCollection), GET SUCCESS (time: 0:00:00.000044)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/Pumps/1
+INFO - 	 Type (Pump.v1_1_0.Pump), GET SUCCESS (time: 0:00:00.000024)
+ERROR - Additional Property Error: Links not defined in schema Pump.v1_1_0 (check version, spelling and casing) ...  at /redfish/v1/ThermalEquipment/CDUs/CDU-001/Pumps/1
+INFO - 	  FAIL...
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/Pumps/2
+INFO - 	 Type (Pump.v1_1_0.Pump), GET SUCCESS (time: 0:00:00.000105)
+ERROR - Additional Property Error: Links not defined in schema Pump.v1_1_0 (check version, spelling and casing) ...  at /redfish/v1/ThermalEquipment/CDUs/CDU-001/Pumps/2
+INFO - 	  FAIL...
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/Filters
+INFO - 	 Type (FilterCollection.FilterCollection), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/Filters/1
+INFO - 	 Type (Filter.v1_0_1.Filter), GET SUCCESS (time: 0:00:00.000020)
+ERROR - Additional Property Error: Links not defined in schema Filter.v1_0_1 (check version, spelling and casing) ...  at /redfish/v1/ThermalEquipment/CDUs/CDU-001/Filters/1
+INFO - 	  FAIL...
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/Reservoirs
+INFO - 	 Type (ReservoirCollection.ReservoirCollection), GET SUCCESS (time: 0:00:00.000084)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/Reservoirs/1
+INFO - 	 Type (Reservoir.v1_0_1.Reservoir), GET SUCCESS (time: 0:00:00.000039)
+ERROR - Additional Property Error: Links not defined in schema Reservoir.v1_0_1 (check version, spelling and casing) ...  at /redfish/v1/ThermalEquipment/CDUs/CDU-001/Reservoirs/1
+INFO - 	  FAIL...
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/EnvironmentMetrics
+INFO - 	 Type (EnvironmentMetrics.v1_3_1.EnvironmentMetrics), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CoolingLoops
+INFO - 	 Type (CoolingLoopCollection.CoolingLoopCollection), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CoolingLoops/Primary
+INFO - 	 Type (CoolingLoop.v1_0_2.CoolingLoop), GET SUCCESS (time: 0:00:00.000113)
+ERROR - Entity Get Error: GET of resource PrimaryCoolantConnectors at URI /redfish/v1/ThermalEquipment/CoolingLoops/Primary/PrimaryCoolantConnectors returned HTTP error. Check URI. ...  at /redfish/v1/ThermalEquipment/CoolingLoops/Primary
+ERROR - Property Validation Error: PrimaryCoolantConnectors ...  at /redfish/v1/ThermalEquipment/CoolingLoops/Primary
+ERROR - Entity Get Error: GET of resource SecondaryCoolantConnectors at URI /redfish/v1/ThermalEquipment/CoolingLoops/Primary/SecondaryCoolantConnectors returned HTTP error. Check URI. ...  at /redfish/v1/ThermalEquipment/CoolingLoops/Primary
+ERROR - Property Validation Error: SecondaryCoolantConnectors ...  at /redfish/v1/ThermalEquipment/CoolingLoops/Primary
+ERROR - Additional Property Error: CoolingLoopType not defined in schema CoolingLoop.v1_0_2 (check version, spelling and casing) ...  at /redfish/v1/ThermalEquipment/CoolingLoops/Primary
+INFO - 	  FAIL...
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CoolingLoops/Primary/PrimaryCoolantConnectors
+ERROR - Get URI Error: URI did not return resource /redfish/v1/ThermalEquipment/CoolingLoops/Primary/PrimaryCoolantConnectors ...  at /redfish/v1/ThermalEquipment/CoolingLoops/Primary/PrimaryCoolantConnectors
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CoolingLoops/Primary/SecondaryCoolantConnectors
+ERROR - Get URI Error: URI did not return resource /redfish/v1/ThermalEquipment/CoolingLoops/Primary/SecondaryCoolantConnectors ...  at /redfish/v1/ThermalEquipment/CoolingLoops/Primary/SecondaryCoolantConnectors
+INFO - 
+*** Validating /redfish/v1/SessionService
+INFO - 	 Type (SessionService.v1_1_9.SessionService), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/SessionService/Sessions
+INFO - 	 Type (SessionCollection.SessionCollection), GET SUCCESS (time: 0:00:00.000171)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService
+INFO - 	 Type (AccountService.v1_15_0.AccountService), GET SUCCESS (time: 0:00:00.000034)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Accounts
+INFO - 	 Type (ManagerAccountCollection.ManagerAccountCollection), GET SUCCESS (time: 0:00:00.000020)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Accounts/user_1768503755156787370
+INFO - 	 Type (ManagerAccount.v1_12_0.ManagerAccount), GET SUCCESS (time: 0:00:00.000137)
+ERROR - Mandatory Property Error: Mandatory prop AccountTypes does not exist ...  at /redfish/v1/AccountService/Accounts/user_1768503755156787370
+ERROR - Property Validation Error: AccountTypes ...  at /redfish/v1/AccountService/Accounts/user_1768503755156787370
+INFO - 	  FAIL...
+INFO - 
+*** Validating /redfish/v1/AccountService/Roles
+INFO - 	 Type (RoleCollection.RoleCollection), GET SUCCESS (time: 0:00:00.000085)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Roles/Administrator
+INFO - 	 Type (Role.v1_3_1.Role), GET SUCCESS (time: 0:00:00.000080)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Roles/Operator
+INFO - 	 Type (Role.v1_3_1.Role), GET SUCCESS (time: 0:00:00.000075)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Roles/ReadOnly
+INFO - 	 Type (Role.v1_3_1.Role), GET SUCCESS (time: 0:00:00.000022)
+INFO - 	 PASS
+INFO - Metadata: Namespaces missing from $metadata: set()
+INFO - 
+Elapsed time: 0:00:10
+INFO - 
+Listing any warnings and errors: 
+INFO -  
+INFO - /redfish/v1/
+INFO - Warnings
+WARNING - Warning: Schema not found for NVMeDomainCollection.NVMeDomainCollection ...  
+WARNING - Warning: Schema not found for StorageSystemCollection.StorageSystemCollection ...  
+WARNING - Warning: Schema not found for StorageServiceCollection.StorageServiceCollection ...  
+INFO -  
+INFO - /redfish/v1/ThermalEquipment/CDUs/CDU-001
+INFO - Errors
+ERROR - Entity Version Error: Linked resource LeakDetection reports version LeakDetection.v1_0_2.LeakDetection not in Schema ...  
+ERROR - Property Validation Error: LeakDetection ...  
+INFO -  
+INFO - /redfish/v1/ThermalEquipment/CDUs/CDU-001/PrimaryCoolantConnectors/1
+INFO - Errors
+ERROR - ValueError: CoolantConnectorType Value Primary Enum not found in ['Pair', 'Supply', 'Return', 'Inline', 'Closed'] ...  
+ERROR - Property Validation Error: CoolantConnectorType ...  
+INFO -  
+INFO - /redfish/v1/ThermalEquipment/CDUs/CDU-001/SecondaryCoolantConnectors/1
+INFO - Errors
+ERROR - ValueError: CoolantConnectorType Value Secondary Enum not found in ['Pair', 'Supply', 'Return', 'Inline', 'Closed'] ...  
+ERROR - Property Validation Error: CoolantConnectorType ...  
+INFO -  
+INFO - /redfish/v1/ThermalEquipment/CDUs/CDU-001/LeakDetection
+INFO - Warnings
+WARNING - Deprecated Property Warning: The given property LeakDetectors is deprecated: This property has been deprecated in favor of the `LeakDetectors` property in the related `Chassis` resource. ...  
+INFO - Errors
+ERROR - Missing Namespace Error: Namespace of LeakDetection.v1_0_2 appears missing from SchemaXML LeakDetection_v1.xml, attempting highest type: #LeakDetection.v1_0_2.LeakDetection ...  
+ERROR - New namespace: LeakDetection.v1_1_0 ...  
+INFO -  
+INFO - /redfish/v1/ThermalEquipment/CDUs/CDU-001/Pumps/1
+INFO - Errors
+ERROR - Additional Property Error: Links not defined in schema Pump.v1_1_0 (check version, spelling and casing) ...  
+INFO -  
+INFO - /redfish/v1/ThermalEquipment/CDUs/CDU-001/Pumps/2
+INFO - Errors
+ERROR - Additional Property Error: Links not defined in schema Pump.v1_1_0 (check version, spelling and casing) ...  
+INFO -  
+INFO - /redfish/v1/ThermalEquipment/CDUs/CDU-001/Filters/1
+INFO - Errors
+ERROR - Additional Property Error: Links not defined in schema Filter.v1_0_1 (check version, spelling and casing) ...  
+INFO -  
+INFO - /redfish/v1/ThermalEquipment/CDUs/CDU-001/Reservoirs/1
+INFO - Errors
+ERROR - Additional Property Error: Links not defined in schema Reservoir.v1_0_1 (check version, spelling and casing) ...  
+INFO -  
+INFO - /redfish/v1/ThermalEquipment/CoolingLoops/Primary
+INFO - Errors
+ERROR - Entity Get Error: GET of resource PrimaryCoolantConnectors at URI /redfish/v1/ThermalEquipment/CoolingLoops/Primary/PrimaryCoolantConnectors returned HTTP error. Check URI. ...  
+ERROR - Property Validation Error: PrimaryCoolantConnectors ...  
+ERROR - Entity Get Error: GET of resource SecondaryCoolantConnectors at URI /redfish/v1/ThermalEquipment/CoolingLoops/Primary/SecondaryCoolantConnectors returned HTTP error. Check URI. ...  
+ERROR - Property Validation Error: SecondaryCoolantConnectors ...  
+ERROR - Additional Property Error: CoolingLoopType not defined in schema CoolingLoop.v1_0_2 (check version, spelling and casing) ...  
+INFO -  
+INFO - /redfish/v1/ThermalEquipment/CoolingLoops/Primary/PrimaryCoolantConnectors
+INFO - Errors
+ERROR - Get URI Error: URI did not return resource /redfish/v1/ThermalEquipment/CoolingLoops/Primary/PrimaryCoolantConnectors ...  
+INFO -  
+INFO - /redfish/v1/ThermalEquipment/CoolingLoops/Primary/SecondaryCoolantConnectors
+INFO - Errors
+ERROR - Get URI Error: URI did not return resource /redfish/v1/ThermalEquipment/CoolingLoops/Primary/SecondaryCoolantConnectors ...  
+INFO -  
+INFO - /redfish/v1/AccountService/Accounts/user_1768503755156787370
+INFO - Errors
+ERROR - Mandatory Property Error: Mandatory prop AccountTypes does not exist ...  
+ERROR - Property Validation Error: AccountTypes ...  
+INFO - 
+Results Summary:
+INFO - Pass: 191, Fail: 21, Warning: 4
+ERROR - Validation has failed: 21 problems found ...  
