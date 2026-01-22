@@ -1,0 +1,167 @@
+INFO - Redfish Service Validator, version 2.5.1
+INFO - 
+INFO - Writing config file to log directory
+INFO - Target URI: http://127.0.0.1:8443
+INFO - authtype: Basic
+collectionlimit: ['LogEntry', '20']
+debugging: False
+forceauth: True
+ip: http://127.0.0.1:8443
+logdir: /output
+oemcheck: True
+password: ******
+requestattempts: 10
+requesttimeout: 10
+schema_directory: ./SchemaFiles/metadata
+uricheck: False
+username: admin
+verbose: 0
+INFO - Start time: 01/16/26 - 17:49:06
+INFO - 
+INFO - Setting up service...
+INFO - Constructing metadata...
+INFO - Redfish Version of Service: 1.23.0
+INFO - Description of service: System Under Test - WAGO CDU Redfish Service version 1.23.0, 00000000-0000-0000-0000-000000000000
+INFO - 
+*** Validating /redfish/v1/
+WARNING - Warning: Schema not found for NVMeDomainCollection.NVMeDomainCollection ...  at /redfish/v1/
+WARNING - Warning: Schema not found for StorageSystemCollection.StorageSystemCollection ...  at /redfish/v1/
+WARNING - Warning: Schema not found for StorageServiceCollection.StorageServiceCollection ...  at /redfish/v1/
+INFO - 	 Type (ServiceRoot.v1_17_0.ServiceRoot), GET SUCCESS (time: 0:00:00.001745)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment
+INFO - 	 Type (ThermalEquipment.v1_1_2.ThermalEquipment), GET SUCCESS (time: 0:00:00.000020)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs
+INFO - 	 Type (CoolingUnitCollection.CoolingUnitCollection), GET SUCCESS (time: 0:00:00.000039)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001
+INFO - 	 Type (CoolingUnit.v1_2_0.CoolingUnit), GET SUCCESS (time: 0:00:00.000032)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/PrimaryCoolantConnectors
+INFO - 	 Type (CoolantConnectorCollection.CoolantConnectorCollection), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/PrimaryCoolantConnectors/1
+INFO - 	 Type (CoolantConnector.v1_1_0.CoolantConnector), GET SUCCESS (time: 0:00:00.000020)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/SecondaryCoolantConnectors
+INFO - 	 Type (CoolantConnectorCollection.CoolantConnectorCollection), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/SecondaryCoolantConnectors/1
+INFO - 	 Type (CoolantConnector.v1_1_0.CoolantConnector), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/LeakDetection
+INFO - 	 Type (LeakDetection.v1_0_1.LeakDetection), GET SUCCESS (time: 0:00:00.000029)
+WARNING - Deprecated Property Warning: The given property LeakDetectors is deprecated: This property has been deprecated in favor of the `LeakDetectors` property in the related `Chassis` resource. ...  at /redfish/v1/ThermalEquipment/CDUs/CDU-001/LeakDetection
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/LeakDetection/LeakDetectors
+INFO - 	 Type (LeakDetectorCollection.LeakDetectorCollection), GET SUCCESS (time: 0:00:00.000021)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/LeakDetection/LeakDetectors/1
+INFO - 	 Type (LeakDetector.v1_1_0.LeakDetector), GET SUCCESS (time: 0:00:00.000021)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/Pumps
+INFO - 	 Type (PumpCollection.PumpCollection), GET SUCCESS (time: 0:00:00.000021)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/Pumps/1
+INFO - 	 Type (Pump.v1_1_0.Pump), GET SUCCESS (time: 0:00:00.000032)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/Pumps/2
+INFO - 	 Type (Pump.v1_1_0.Pump), GET SUCCESS (time: 0:00:00.000035)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/Filters
+INFO - 	 Type (FilterCollection.FilterCollection), GET SUCCESS (time: 0:00:00.000041)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/Filters/1
+INFO - 	 Type (Filter.v1_0_1.Filter), GET SUCCESS (time: 0:00:00.000060)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/Reservoirs
+INFO - 	 Type (ReservoirCollection.ReservoirCollection), GET SUCCESS (time: 0:00:00.000043)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/Reservoirs/1
+INFO - 	 Type (Reservoir.v1_0_1.Reservoir), GET SUCCESS (time: 0:00:00.000057)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CDUs/CDU-001/EnvironmentMetrics
+INFO - 	 Type (EnvironmentMetrics.v1_3_1.EnvironmentMetrics), GET SUCCESS (time: 0:00:00.000020)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CoolingLoops
+INFO - 	 Type (CoolingLoopCollection.CoolingLoopCollection), GET SUCCESS (time: 0:00:00.000018)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/ThermalEquipment/CoolingLoops/Primary
+INFO - 	 Type (CoolingLoop.v1_0_2.CoolingLoop), GET SUCCESS (time: 0:00:00.000021)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/SessionService
+INFO - 	 Type (SessionService.v1_1_9.SessionService), GET SUCCESS (time: 0:00:00.000052)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/SessionService/Sessions
+INFO - 	 Type (SessionCollection.SessionCollection), GET SUCCESS (time: 0:00:00.000027)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService
+INFO - 	 Type (AccountService.v1_15_0.AccountService), GET SUCCESS (time: 0:00:00.000019)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Accounts
+INFO - 	 Type (ManagerAccountCollection.ManagerAccountCollection), GET SUCCESS (time: 0:00:00.000020)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Accounts/user_1768503755156787370
+INFO - 	 Type (ManagerAccount.v1_12_0.ManagerAccount), GET SUCCESS (time: 0:00:00.000061)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Roles
+INFO - 	 Type (RoleCollection.RoleCollection), GET SUCCESS (time: 0:00:00.000027)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Roles/Administrator
+INFO - 	 Type (Role.v1_3_1.Role), GET SUCCESS (time: 0:00:00.000020)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Roles/Operator
+INFO - 	 Type (Role.v1_3_1.Role), GET SUCCESS (time: 0:00:00.000020)
+INFO - 	 PASS
+INFO - 
+*** Validating /redfish/v1/AccountService/Roles/ReadOnly
+INFO - 	 Type (Role.v1_3_1.Role), GET SUCCESS (time: 0:00:00.000024)
+INFO - 	 PASS
+INFO - Metadata: Namespaces missing from $metadata: set()
+INFO - 
+Elapsed time: 0:00:10
+INFO - 
+Listing any warnings and errors: 
+INFO -  
+INFO - /redfish/v1/
+INFO - Warnings
+WARNING - Warning: Schema not found for NVMeDomainCollection.NVMeDomainCollection ...  
+WARNING - Warning: Schema not found for StorageSystemCollection.StorageSystemCollection ...  
+WARNING - Warning: Schema not found for StorageServiceCollection.StorageServiceCollection ...  
+INFO -  
+INFO - /redfish/v1/ThermalEquipment/CDUs/CDU-001/LeakDetection
+INFO - Warnings
+WARNING - Deprecated Property Warning: The given property LeakDetectors is deprecated: This property has been deprecated in favor of the `LeakDetectors` property in the related `Chassis` resource. ...  
+INFO - 
+Results Summary:
+INFO - Pass: 195, Fail: 0, Warning: 4
+INFO - Validation has succeeded.
